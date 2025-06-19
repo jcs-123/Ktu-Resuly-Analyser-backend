@@ -1,0 +1,34 @@
+{
+  "name": "ktu-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "KTU",
+    "result",
+    "analyzer",
+    "college result",
+    "student performance",
+    "academic analysis",
+    "Kerala Technological University",
+    "result converter"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.15.1",
+    "multer": "^2.0.0",
+    "nodemailer": "^7.0.3",
+    "pdf-parse": "^1.1.1",
+    "resend": "^4.6.0"
+  }
+}
