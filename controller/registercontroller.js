@@ -9,7 +9,7 @@ const transporter = nodemailer.createTransport({
   service: 'gmail', // use built-in service for Gmail
   auth: {
     user: 'jcs@jecc.ac.in',         // your full Gmail address
-    pass: 'csaw xqnr tdhw pcug'    // 16-char app password from Google
+    pass: 'zmjj yozm zmsz xerd'    // 16-char app password from Google
   }
 });
 
