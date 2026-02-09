@@ -6,6 +6,7 @@ const rev2015scheme =require('./controller/rev2015scheme')
 const depdatacontroller =require('./controller/depdatacontroller')
 const credictcontroller = require('./controller/credictcontroller');
 const exceluploadcontroller = require('./controller/excleuploadcontroller');
+const elsecredictcontroller = require('./controller/elsecreditcontroller');
 
 //instance router
 const router = new express.Router()
@@ -32,6 +33,8 @@ router.get('/depdata', depdatacontroller.getDepData); // GET /api/depdata
 router.post('/add-depdata', depdatacontroller.addDepData);
 // credict get
 router.get('/getcredict', credictcontroller.getSemesterCredit); // GET /api/depdata
+router.get('/getelsecredict', elsecredictcontroller.getelseSemesterCredit); // GET /api/depdata
+
 // excel download
 router.post(
   '/exceldownload',
