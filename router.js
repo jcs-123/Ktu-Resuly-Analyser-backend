@@ -7,7 +7,7 @@ const depdatacontroller =require('./controller/depdatacontroller')
 const credictcontroller = require('./controller/credictcontroller');
 const exceluploadcontroller = require('./controller/excleuploadcontroller');
 const elsecredictcontroller = require('./controller/elsecreditcontroller');
-
+const { googleLogin } = require('./controller/googleAuthController');
 //instance router
 const router = new express.Router()
 
@@ -25,7 +25,8 @@ router.post(
   multerConfig.single('filerev2015'),
   rev2015scheme.uploadRevision2015File
 );
-
+// google
+router.post('/auth/google', googleLogin);
 // GET route to fetch parsed results (optionally by filename)
 router.get('/revision2015', rev2015scheme.getRevision2015Data);
 //depdaat

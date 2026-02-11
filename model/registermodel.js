@@ -5,32 +5,34 @@ const registerSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  occupation: {
-    type: String,
-    required: true,
-  },
-  college: {
-    type: String,
-    required: true,
-  },
+
   email: {
     type: String,
     required: true,
     unique: true,
   },
-  password: {
+
+  googleId: {
     type: String,
-    required: true,
+    unique: true,
+    sparse: true,
   },
-  confirmPassword: {
+
+  occupation: {
     type: String,
-    required: true,
-  }, // OTP and Password Reset Support
-resetOTP: String,
-resetOTPExpires: Number
+    default: 'google-user',
+  },
+
+  college: {
+    type: String,
+    default: 'Not Provided',
+  },
+
+  authProvider: {
+    type: String,
+    default: 'google',
+  }
 
 }, { timestamps: true });
 
-const Register = mongoose.model('Register', registerSchema);
-
-module.exports = Register;
+module.exports = mongoose.model('GoogleRegister', registerSchema);
